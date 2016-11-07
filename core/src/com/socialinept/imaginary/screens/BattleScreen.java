@@ -61,6 +61,8 @@ public class BattleScreen implements Screen{
 
         //create our game HUD for scores/timers/level info
         hud = new BattleHUD(game, batch);
+        hud.setBattle(battle);
+        hud.initialize();
         texture = new Texture(Gdx.files.internal("data/blue.png"));
 
         //create our game HUD for scores/timers/level info

@@ -11,6 +11,7 @@ import java.util.TreeMap;
  */
 public class Battle {
     private ArrayList<Entity> entities = new ArrayList<Entity>();
+    private ArrayList<BattleAddEntityListener> addEntityListeners = new ArrayList<BattleAddEntityListener>();
     private ArrayList<Team> teams = new ArrayList<Team>();
     private HashMap<Entity, Point> positions = new HashMap<Entity, Point>();
     private ServerMap serverMap;
@@ -30,5 +31,10 @@ public class Battle {
 
     public Point getEntityPosition(Entity e){
         return positions.get(e);
+    }
+
+
+    public void addBattleAddEntityListener(BattleAddEntityListener listener){
+
     }
 }
